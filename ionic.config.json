@@ -1,0 +1,7 @@
+{
+  "name": "MovieTrips",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
