@@ -1,0 +1,20 @@
+<div class="post">
+  <ion-item>
+  
+    <ion-label>
+    <div class="polairod">
+      <h2>{{ post.user }}</h2>
+      <p>{{ post.location.city }}, {{ post.location.country }}</p>
+      <div class="content"> 
+        <img *ngIf="post.media.type === 'image'" [src]="post.media.src">
+        <video *ngIf="post.media.type === 'video'" [src]="post.media.src" autoplay loop></video>
+      </div>
+      <div class="container">
+      <h2>{{ post.MovieName || post }}</h2>
+      <p>{{ post.description }}</p>
+      </div>
+    </div>
+    </ion-label>
+  </ion-item>
+</div>
+

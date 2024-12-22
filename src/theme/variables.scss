@@ -1,2 +1,21 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+/* Custom Colors */
+:root {
+    --ion-color-primary: #a45d3d;  /* Tomato Red for Movies */
+    --ion-color-secondary: #294861;  /* Steel Blue for Travels */
+    --ion-color-tertiary: #877c3f;  /* Gold for highlights */
+    
+    /* Background colors */
+    --ion-background-color: #e6c6b8;
+    --ion-card-background-color: #a45d3d;
+    
+    /* Button Colors */
+    --button-color-primary: #456188;
+    --button-color-secondary: #334865;
+    
+    /* Text Colors */
+    --ion-text-color: #333333;
+    --ion-text-color-secondary: #555555;
+  }

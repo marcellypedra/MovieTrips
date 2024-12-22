@@ -1,0 +1,17 @@
+ion-toolbar {
+    --background-color: var(-ion-card-background-color) /* Light background */
+    --color: #333; /* Dark text */
+    align-items: center;
+  }
+  
+  ion-title {
+    font-weight: bold;
+  }
+  
+  ion-button {
+    --color: #007bff; /* Button color */
+  }
+  
+  ion-icon {
+    font-size: 1.5rem;
+  }

@@ -1,0 +1,105 @@
+<!-- Introductory Text -->
+  <div class="intro-text">
+    
+  <p>
+      Do you want receive information about our package holidays?
+      Send a message to us!
+    </p>
+  </div>
+
+<ion-content class="content">
+  <div class="form-container">
+    <form #postForm="ngForm">
+
+
+    <!-- User-->
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+        <ion-input 
+          [(ngModel)]="name" name="name"
+          required>
+        </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+        <ion-input 
+          [(ngModel)]="email" name="email" 
+          required>
+        </ion-input>
+    </ion-item>
+
+    <!-- Movie Name-->
+    <ion-item>
+      <ion-label position="stacked">Destination</ion-label>
+      <ion-input 
+         [(ngModel)]="destination" name="destination" required></ion-input>
+    </ion-item> 
+
+    <!-- Movie -->
+    <ion-item>
+      <ion-label position="stacked">Movie Name</ion-label>
+      <ion-input 
+         [(ngModel)]="movieName" name="movieName"> 
+      </ion-input>
+    </ion-item>
+
+      <!-- Availability -->
+      <ion-item>
+        <ion-label position="stacked">Select Date</ion-label>
+        <ion-label position="stacked">From:</ion-label>
+        <div class="date-container">
+          <ion-button  fill="clear"  (click)="toggleCalendar('from')">
+            <ion-icon name="calendar-outline"></ion-icon>
+          </ion-button>
+        <!-- Display the Selected Date -->
+        <ion-input [value]="selectedDateFrom | date:'MM/dd/yyyy'" readonly></ion-input>
+
+        </div>
+
+             <!-- Calendar Icon Trigger -->
+             
+
+        <ion-label position="stacked">To:</ion-label>
+        <!-- Display the Selected Date -->
+        <div class="date-container">
+          <ion-button  fill="clear"  (click)="toggleCalendar('to')">
+            <ion-icon name="calendar-outline"></ion-icon>
+          </ion-button>
+          <ion-input [value]="selectedDateTo | date:'MM/dd/yyyy'" readonly></ion-input>
+        </div>
+    
+        <!-- Calendar Icon Trigger -->
+        
+      </ion-item>
+    
+      <ion-datetime
+  *ngIf="isCalendarOpen && activeCalendar === 'from'"
+  [(ngModel)]="selectedDateFrom" name="selectedDateFrom"
+  presentation="date"
+  displayFormat="MM/dd/yyyy"
+  min="2024-01-01"
+  max="2025-12-31"
+  (ionChange)="onDateChange('from', $event)">
+</ion-datetime>
+
+<!-- Hidden ion-datetime with Trigger for To Date -->
+<ion-datetime
+  *ngIf="isCalendarOpen && activeCalendar === 'to'"
+  [(ngModel)]="selectedDateTo" name="selectedDateTo"
+  presentation="date"
+  displayFormat="MM/dd/yyyy"
+  min="2024-01-01"
+  max="2025-12-31"
+  (ionChange)="onDateChange('to', $event)">
+</ion-datetime>
+      
+      <button class= "Submitbtn" type="button" (click)="sendMsg()"> Send
+      <ion-icon name="send-outline" class="icon-size"></ion-icon></button>
+      
+  
+
+    </form>  
+  </div>
+</ion-content>
+
+

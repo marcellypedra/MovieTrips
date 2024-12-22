@@ -1,0 +1,99 @@
+ion-content {
+    height: 100%;
+    overflow-y: auto; /* Ensure vertical scrolling */
+    display: block;
+    --ion-background-color: var(--ion-background-color);   /* Ensures it's treated as a block-level element */
+  }
+app-newpost{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.add-post {
+    position: fixed;
+    bottom: 20px; /* Adjust the value to change the distance from the bottom */
+    right: 20px;  /* Adjust the value to change the distance from the right */
+    background-color: var(--ion-color-primary);
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensures the button stays on top of other elements */
+  }
+  
+  .add-post:hover {
+    background-color: var(--ion-color-secondary); /* Change button color on hover */
+  }
+
+  ion-toolbar {
+    display: flex;
+    justify-content: space-between;  /* Ensures the icons stay on the left and right */
+    align-items: center; /* Center the content vertically */
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    
+  }
+
+  .ion-header{
+    background-color: var(-ion-card-background-color);
+  }
+
+  .icon-size{
+    font-size: 250%;
+  }
+
+  
+  
+  ion-title {
+    flex: 1;
+    font-size: 24px;  /* Adjust default size */
+    text-align: center;  /* Center-align the title */
+    white-space: normal;  /* Allow wrapping */
+    word-wrap: break-word;  /* Break long words */
+    margin: 0;  /* Remove default margins for better wrapping */
+    overflow-wrap: break-word;  /* Ensure long words break onto the next line */
+  }
+
+  ion-buttons{
+    display: flex;
+    justify-content:center;
+  }
+
+  .intro-text {
+    padding: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 16px;
+    text-align: justify;
+  }
+  
+  .intro-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color:var(--ion-color-secondary);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 16px;
+    text-align: center;
+
+  }
+  /* Adjust font size for smaller screens */
+  @media (max-width: 768px) {
+    ion-title {
+      font-size: 20px;  /* Smaller font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    ion-title {
+      font-size: 18px;  /* Even smaller font size for very small screens */
+    }
+  }

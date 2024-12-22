@@ -1,17 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <app-header></app-header>
+
+
+<ion-content [fullscreen]="true" id="main-content">
+  <ion-header collapse="condense"></ion-header>
+    <!-- Introductory Text -->
+    <div class="intro-title">
+
+    <h3><b>Welcome to MoviesTrips!</b></h3><br>
+
+  </div>
+    <div class="intro-text">
+      
+    <p>
+        Have you a passion for movies and for travelling?
+        Every time you are planning a trip, do you try to fit a place where one of your favorite movies was set?
+        Are you the person that always take pictures at places where iconic movie scenes were filmed?
+        So, this is the place for you! Here we are a community that shares information and curiosities about film sets around the world!
+        Here you can create your own posts and share with people your passion.
+      </p>
+    </div>
+  <!-- Post List -->
+  <app-post *ngFor="let post of posts" [post]="post"></app-post>
+    
+  
 </ion-content>
+

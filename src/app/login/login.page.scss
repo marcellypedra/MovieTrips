@@ -1,0 +1,13 @@
+/* Style for the logo container */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;  /* Adjust the space from the top */
+    margin-bottom: 20px; /* Adjust the space below the logo */
+  }
+  
+  .logo {
+    max-width: 40%; /* Make sure the logo doesn't take too much space */
+    height: 35%;  /* Maintain the aspect ratio */
+  }

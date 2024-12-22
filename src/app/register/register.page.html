@@ -1,0 +1,64 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <form (ngSubmit)="onRegister()">
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input
+              type="text"
+              [(ngModel)]="username"
+              name="username"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input
+              type="email"
+              [(ngModel)]="email"
+              name="email"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input
+            [type]="isPasswordVisible ? 'text' : 'password'" 
+            [(ngModel)]="password" 
+            name="password"
+            required
+          ></ion-input>
+          <ion-icon 
+          slot="end" 
+          [name]="isPasswordVisible ? 'eye-off' : 'eye'" 
+          (click)="togglePasswordVisibility()">
+        </ion-icon>
+      </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Confirm Password</ion-label>
+            <ion-input
+            [type]="isConfirmPasswordVisible ? 'text' : 'password'" 
+            [(ngModel)]="confirmPassword" 
+            name="confirmPassword"
+            required
+          ></ion-input>
+          <ion-icon 
+            slot="end" 
+            [name]="isConfirmPasswordVisible ? 'eye-off' : 'eye'" 
+            (click)="toggleConfirmPasswordVisibility()">
+          </ion-icon>
+        </ion-item>
+
+          
+          <ion-button expand="full" type="submit">Register</ion-button>
+          <ion-button expand="full" type="backbtn"(click)="BackLogin()"> Back to Login</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

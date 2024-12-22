@@ -1,0 +1,60 @@
+
+<ion-content class="content">
+  <div class="form-container">
+    <form #postForm="ngForm">
+
+    <!-- Movie Name-->
+    <ion-item>
+      <ion-label position="stacked">Movie Name</ion-label>
+      <ion-input 
+        [(ngModel)]="post.MovieName" name="MovieName" required></ion-input>
+    </ion-item> 
+
+
+    <!-- Description -->
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea 
+        [(ngModel)]="post.description" 
+        name="description" 
+        rows="6">
+      </ion-textarea>
+    </ion-item>
+
+    <!-- User-->
+    <ion-item>
+      <ion-label position="stacked">User</ion-label>
+      <ion-input 
+        [(ngModel)]="post.user" 
+        name="user" 
+        required>
+      </ion-input>
+    </ion-item> 
+
+    <!-- Location and Camera Buttons -->
+    <div class="button-row">   
+      
+      <button class= "Locbtn" type="button" (click)="getLocation()">
+        <ion-icon name="location-outline"class="icon-size"></ion-icon>
+      </button>
+        <p *ngIf="post.location">
+          {{ post.location.city }} {{ post.location.country }}
+        </p>
+      <button class= "Mediabtn" type="button" (click)="openCamera()">
+        <ion-icon name="camera-outline"class="icon-size"></ion-icon>
+      </button>
+          
+      <p *ngIf="post.media">
+        <img [src]="post.media" alt="Captured Media" style="max-width: 100%; height: auto;" />
+      </p>
+    </div>
+
+    
+    <!-- Submit Post -->
+      <button class= "Submitbtn" type="button" (click)="createPost()"> Publish
+      <ion-icon name="create" class="icon-size"></ion-icon>
+      </button>
+    </form>
+  </div>
+</ion-content>
+

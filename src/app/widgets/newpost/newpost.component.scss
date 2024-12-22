@@ -1,0 +1,92 @@
+.Submitbtn{
+    //background-color: white;
+    //color: black;
+    width: auto;
+    height: 54px;
+    //border-radius: 50%;
+    line-height: 54px;
+    text-align: center
+}
+
+.icon-size{
+    font-size: 200%;
+  }
+
+  .content {
+    --background: var(--ion-background-color); /* Ensure the background matches the theme */
+  }
+  
+ // .form-container {
+  //  display: flex;
+  //  flex-direction: column; /* Stack the children (form elements) vertically */
+  //  justify-content: center; /* Center the form vertically */
+  //  align-items: center; /* Center the form horizontally */
+  //  height: 100%; /* Take the full height of the content */
+  //  padding: 16px; /* Add some padding around the form */
+  //  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+  //}
+  
+  form {
+    width: 100%; /* Allow the form to take up the available width */
+    max-width: 400px; /* Set a maximum width for the form */
+    //text-align: center; /* Center the text within the form if needed */
+  }
+
+  //.location-section, .media-section {
+  //  margin-top: 16px; /* Add spacing above each section */
+  //  text-align: left; /* Align content to the left */
+    
+  //  padding: 8px; /* Add padding inside the box */
+  //}
+
+  
+.Locbtn, .Mediabtn {
+    display: inline-block; /* Ensure buttons don't stretch */
+    margin-top: 8px; /* Add some spacing above the button */
+    
+}
+
+.Locbtn, .Mediabtn {
+    float: left;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0;
+}
+  
+  
+  ion-item {
+    //--background: #fff; /* Set a background color for the box */
+    //border: 1px solid #ccc; /* Add a border around the item */
+    //border-radius: 8px; /* Optional: Rounded corners */
+    padding: 8px; /* Add padding inside the box */
+    margin-bottom: 16px; /* Space between input boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+
+  ion-label {
+    font-weight: bold; /* Make the label stand out */
+    margin-bottom: 4px; /* Space between the label and the input */
+    color: #333; /* Label color */
+  }
+
+  ion-input {
+    flex-grow: 1;
+  }
+
+
+
+
+.intro-text {
+  padding: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 16px;
+  text-align: justify;
+}
+

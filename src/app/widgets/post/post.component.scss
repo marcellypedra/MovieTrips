@@ -1,0 +1,33 @@
+.post{
+    border-radius: 5px;
+    margin: 50px;
+    padding: 15px;
+    box-shadow: opx opx 1 px 1px rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    --ion-background-color: var(--ion-background-color); 
+    
+}
+
+img{
+    position: center;
+    width: 100%;
+}
+
+div.polaroid {
+    width: 80%;
+    background-color: var(--ion-background-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    align-content: center;
+    
+  }
+  
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  img{
+
+
+  }
